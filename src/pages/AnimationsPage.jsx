@@ -25,7 +25,7 @@ export default function AnimationsPage() {
   }
 
   return (
-    <div className="min-h-screen pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto selection:bg-biohazard-red selection:text-white">
+    <div className="relative z-0 min-h-screen pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto selection:bg-biohazard-red selection:text-white">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -54,7 +54,10 @@ export default function AnimationsPage() {
             {animatedMedia.map((media) => (
               <button
                 key={media.id}
-                onClick={() => setSelectedMedia(media)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedMedia(media);
+                }}
                 className={`flex-shrink-0 lg:w-full text-left p-4 rounded-xl transition-all duration-300 group relative overflow-hidden ${
                   selectedMedia.id === media.id
                     ? 'bg-blue-600 text-white shadow-xl translate-x-1'
@@ -65,15 +68,12 @@ export default function AnimationsPage() {
                   <span className="text-[9px] font-mono block opacity-50 mb-1">
                     {media.year} // {media.id.toUpperCase()}
                   </span>
-                  <span className="font-bold uppercase tracking-tighter italic text-xs sm:text-sm whitespace-nowrap lg:whitespace-normal">
+                  <span className="font-bold uppercase tracking-tighter italic text-xs sm:text-sm whitespace-nowrap lg:whitespace-normal block">
                     {media.title}
                   </span>
                 </div>
                 {selectedMedia.id === media.id && (
-                  <motion.div
-                    layoutId="activeGlow"
-                    className="absolute inset-0 bg-blue-400/20 blur-xl"
-                  />
+                  <div className="absolute inset-0 bg-blue-400/10 border-l-4 border-blue-500" />
                 )}
               </button>
             ))}

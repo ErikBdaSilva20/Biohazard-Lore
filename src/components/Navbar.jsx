@@ -37,7 +37,7 @@ export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-biohazard-dark/80 backdrop-blur-lg border-b border-biohazard-red/20 h-20">
+    <nav className="fixed top-0 left-0 right-0 z-[1000] bg-biohazard-dark/80 backdrop-blur-lg border-b border-biohazard-red/20 h-20">
       <div className="max-w-7xl mx-auto px-4 h-full">
         <div className="flex items-center justify-between h-full">
           {/* Logo */}
@@ -130,7 +130,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="fixed inset-0 bg-biohazard-dark z-[100] lg:hidden flex flex-col h-[100dvh]"
+            className="fixed inset-0 bg-biohazard-dark z-[1001] lg:hidden flex flex-col h-[100dvh]"
           >
             {/* Mobile Header (Fixed) */}
             <div className="h-20 flex items-center justify-between px-6 border-b border-biohazard-red/20 shrink-0 bg-biohazard-dark/95 backdrop-blur-md">
