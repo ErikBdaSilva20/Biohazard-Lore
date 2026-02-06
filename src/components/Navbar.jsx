@@ -129,51 +129,82 @@ export default function Navbar() {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            className="fixed inset-0 top-20 bg-biohazard-dark z-50 lg:hidden overflow-y-auto"
+            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+            className="fixed inset-0 bg-biohazard-dark z-[100] lg:hidden flex flex-col h-[100dvh]"
           >
-            <div className="p-6 space-y-8">
-              <div className="space-y-4">
-                <p className="text-biohazard-red text-[10px] font-black uppercase tracking-[0.3em] mb-4">
-                  Arquivos Principais
-                </p>
-                {navItems.map((item) => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setIsOpen(false)}
-                    className="flex items-center gap-4 text-2xl font-black italic uppercase text-white hover:text-biohazard-red transition-colors"
-                  >
-                    <item.icon className="w-6 h-6 text-biohazard-red/50" />
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
+            {/* Mobile Header (Fixed) */}
+            <div className="h-20 flex items-center justify-between px-6 border-b border-biohazard-red/20 shrink-0 bg-biohazard-dark/95 backdrop-blur-md">
+              <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center space-x-2">
+                <Ghost className="w-8 h-8 text-biohazard-red" />
+                <span className="text-2xl font-black tracking-tighter text-white uppercase italic">
+                  Biohazard<span className="text-biohazard-red">Lore</span>
+                </span>
+              </Link>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-white p-2 hover:text-biohazard-red transition-colors"
+                aria-label="Fechar Menu"
+              >
+                <X className="w-8 h-8" />
+              </button>
+            </div>
 
-              <div className="space-y-6 pt-10 border-t border-white/5">
-                <p className="text-gray-500 text-[10px] font-black uppercase tracking-[0.3em] mb-4 px-2">
-                  Relatórios Adicionais
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  {moreItems.map((item) => (
-                    <Link
-                      key={item.path}
-                      to={item.path}
-                      onClick={() => setIsOpen(false)}
-                      className="flex flex-col items-center gap-2 p-4 bg-white/5 rounded-2xl border border-white/10 text-gray-400 active:bg-biohazard-red/20 active:text-white transition-all"
-                    >
-                      <item.icon className="w-6 h-6 text-biohazard-red" />
-                      <span className="text-[10px] font-black uppercase tracking-widest text-center">
-                        {item.name}
-                      </span>
-                    </Link>
-                  ))}
+            {/* Scrollable Content Container */}
+            <div className="flex-grow overflow-y-auto overflow-x-hidden">
+              <div className="p-8 space-y-12 pb-20">
+                {/* Main Links Area */}
+                <div className="space-y-6">
+                  <p className="text-biohazard-red text-[11px] font-black uppercase tracking-[0.4em] opacity-60">
+                    Sistemas Centrais
+                  </p>
+                  <div className="flex flex-col space-y-6">
+                    {navItems.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        onClick={() => setIsOpen(false)}
+                        className="group flex items-center gap-6"
+                      >
+                        <item.icon className="w-7 h-7 text-biohazard-red group-hover:scale-110 transition-transform" />
+                        <span className="text-3xl font-black italic uppercase text-white group-hover:text-biohazard-red transition-colors">
+                          {item.name}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Additional Content Grid */}
+                <div className="space-y-6">
+                  <p className="text-gray-500 text-[11px] font-black uppercase tracking-[0.4em]">
+                    Dados de Campo
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    {moreItems.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        onClick={() => setIsOpen(false)}
+                        className="flex flex-col items-center justify-center gap-3 p-6 bg-white/5 rounded-2xl border border-white/10 text-gray-400 active:bg-biohazard-red/20 active:text-white transition-all transform active:scale-95"
+                      >
+                        <item.icon className="w-8 h-8 text-biohazard-red" />
+                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-center leading-tight">
+                          {item.name}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Tactical Footer Button */}
+                <div className="pt-4">
                   <Link
                     to="/re4-comparison"
                     onClick={() => setIsOpen(false)}
-                    className="flex flex-col items-center gap-2 p-4 bg-biohazard-red/10 rounded-2xl border border-biohazard-red/20 text-biohazard-red active:bg-biohazard-red transition-all col-span-2"
+                    className="flex items-center justify-center gap-4 p-6 bg-gradient-to-r from-biohazard-red/20 to-transparent rounded-2xl border border-biohazard-red/30 text-biohazard-red active:from-biohazard-red active:text-white transition-all transform active:scale-95 w-full"
                   >
-                    <Ghost className="w-6 h-6" />
-                    <span className="text-[10px] font-black uppercase tracking-widest">
+                    <Ghost className="w-6 h-6 animate-pulse" />
+                    <span className="text-[11px] font-black uppercase tracking-[0.3em]">
                       Legacy RE4 Archive
                     </span>
                   </Link>
