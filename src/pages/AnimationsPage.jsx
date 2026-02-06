@@ -14,7 +14,15 @@ import { useState } from 'react';
 import { animatedMedia } from '../data/animations';
 
 export default function AnimationsPage() {
-  const [selectedMedia, setSelectedMedia] = useState(animatedMedia[0]);
+  const [selectedMedia, setSelectedMedia] = useState(animatedMedia[0] || null);
+
+  if (!selectedMedia) {
+    return (
+      <div className="min-h-screen pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto flex items-center justify-center text-white">
+        Aguardando dados de mídia...
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto selection:bg-biohazard-red selection:text-white">
