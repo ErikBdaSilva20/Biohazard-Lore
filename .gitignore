@@ -1,0 +1,107 @@
+# ===============================
+# DEPENDÊNCIAS
+# ===============================
+node_modules/
+.pnpm-store/
+.yarn/*
+.yarn-cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===============================
+# BUILD / DIST
+# ===============================
+dist/
+dist-ssr/
+build/
+.vite/
+
+# ===============================
+# AMBIENTE
+# ===============================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===============================
+# CACHE
+# ===============================
+.cache/
+.eslintcache
+.stylelintcache
+
+# ===============================
+# LOGS
+# ===============================
+logs/
+*.log
+
+# ===============================
+# SISTEMA OPERACIONAL
+# ===============================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===============================
+# EDITORES / IDEs
+# ===============================
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ===============================
+# TESTES
+# ===============================
+coverage/
+.nyc_output/
+
+# ===============================
+# TYPE SCRIPT (se futuramente usar)
+# ===============================
+*.tsbuildinfo
+
+# ===============================
+# DEPLOY / HOSTING
+# ===============================
+.vercel/
+.netlify/
+.firebase/
+
+# ===============================
+# ARQUIVOS TEMPORÁRIOS
+# ===============================
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# ===============================
+# MISC
+# ===============================
+*.zip
+*.tar
+*.gz
+
+# ===============================
+# CONFIGS SENSÍVEIS
+# ===============================
+config/local.json
+config/secrets.json
+
+# ===============================
+# OPTIONAL: IGNORAR ASSETS PESADOS
+# (se futuramente usar vídeos/mapas grandes)
+# ===============================
+# public/videos/
+# public/maps/raw/
