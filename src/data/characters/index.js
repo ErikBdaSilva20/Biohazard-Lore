@@ -3,10 +3,10 @@ export const characters = [
     id: 'leon-kennedy',
     name: 'Leon S. Kennedy',
     slug: 'leon-kennedy',
-    alias: 'O Sobrevivente de Raccoon',
+    alias: 'O Sobrevivente Sagrado (Ikeoji)',
     firstAppearance: 'RE2 (1998)',
-    status: 'Ativo (D.S.O.)',
-    bio: 'Leon passou de um policial idealista a um dos agentes mais letais e cínicos do mundo. Seu trauma em Raccoon City moldou sua determinação em erradicar o bioterrorismo. Ele é conhecido por sua habilidade extrema com facas e armas leves, além de uma resiliência psicológica invejável.',
+    status: 'Curado / Ativo (D.S.O.)',
+    bio: 'Leon passou de um policial idealista a um dos agentes mais mortais e esgotados do mundo. Diagnosticado com a "Síndrome de Raccoon City" (SRC) - uma falência degenerativa fruto dos resíduos de T-Vírus arquivados em seu corpo - ele desafiou sua própria morte prematura para expor alianças bioterroristas sombrias. Ele é um monstro da sobrevivência com maestria tática inigualável.',
     evolution: [
       {
         game: 'Resident Evil 2',
@@ -26,9 +26,15 @@ export const characters = [
         description:
           'Enfrenta o peso de decisões impossíveis, como a execução do presidente infectado, e a perda de amigos em um conflito global que ameaça a ordem mundial.',
       },
+      {
+        game: 'Resident Evil Requiem',
+        role: 'Veterano Aflito (Ikeoji)',
+        description:
+          'Degenerando lentamente pela letal Síndrome de Raccoon City, Leon vive um pesadelo implacável em uma jornada de ação brutal (estilo RE4R) lutando contra monstros como "Victor Gideon". No limite da morte, é curado definitivamente pelo milagre da Panaceia Elpis.',
+      },
     ],
-    relatedGames: ['Resident Evil 2', 'Resident Evil 4', 'Resident Evil 6'],
-    relatedViruses: ['T-Vírus', 'Las Plagas', 'C-Vírus'],
+    relatedGames: ['Resident Evil 2', 'Resident Evil 4', 'Resident Evil 6', 'Resident Evil Requiem'],
+    relatedViruses: ['T-Vírus', 'SRC', 'Las Plagas', 'C-Vírus', 'Elpis (A Cura)'],
   },
   {
     id: 'chris-redfield',

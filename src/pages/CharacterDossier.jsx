@@ -8,12 +8,12 @@ import PapperFibers from '../assets/PapperFibers.png';
 import AdaFace from '../assets/AdaWondFace.webp';
 import ChrisFace from '../assets/ChrisFace.jpg';
 import ClaireFace from '../assets/ClarieFace.webp';
+import GraceAshcroftFace from '../assets/GraceAshcroft.jpg';
 import JillFace from '../assets/JillValentineFace.jpg';
 import KrauserFace from '../assets/KrauserFace.jpg';
-import LeonFace from '../assets/LeonFace.jpg';
+import LeonFace from '../assets/LeonFace.webp';
 import RebeccaFace from '../assets/RebeccaFace.jpg';
 import WeskerFace from '../assets/WeskerFace.jpg';
-import GraceAshcroftFace from '../assets/GraceAshcroft.jpg';
 
 import { characters } from '../data/characters';
 

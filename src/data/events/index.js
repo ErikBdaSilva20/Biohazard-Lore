@@ -110,10 +110,10 @@ export const events = [
     importance: 'high',
   },
   {
-    date: '2025/2026',
-    title: 'Projeto Requiem (RE9 Rumores)',
+    date: '2025',
+    title: 'O Fim da Era (Incidente Requiem)',
     description:
-      'Arquivos interceptados sugerem um ataque em larga escala a uma ilha isolada no Sudeste Asiático. A B.S.A.A. é acusada de traição e uso de B.O.W.s humanas. Jill Valentine e Chris Redfield voltam à ativa para o que pode ser a última missão do S.T.A.R.S. original.',
+      'A infiltração definitiva de Grace Ashcroft, Leon Kennedy, e do Hound Wolf Squad na central europeia conectada à B.S.A.A. O mistério de Raccoon City de 1998 explode em um escândalo global após o desbloqueio da ARK. Leon é curado da SRC pelo antiviral Elpis, enquanto a corrupção é finalmente aniquilada.',
     type: 'game',
     gameId: 're9',
     importance: 'critical',
@@ -122,39 +122,39 @@ export const events = [
 
 export const theories = [
   {
-    id: 'wesker-resurrection',
-    title: 'O Retorno de Wesker (RE9)',
-    description:
-      'Teorias da comunidade baseadas no final de RE4 Remake sugerem que o Wesker destruído no vulcão era apenas uma das muitas cópias ou clones, ou que sua consciência foi preservada digitalmente pela "The Family". Com o retorno de Jill no RE9, um novo confronto é quase certo.',
-    source: 'RE4 Remake Ending / Community Forums',
-  },
-  {
     id: 'bsaa-corruption',
-    title: 'B.S.A.A. é a Nova Umbrella?',
+    title: '[COMPROVADA] B.S.A.A. e a Nova Umbrella',
     description:
-      'No final de Village, vemos que as tropas da B.S.A.A. enviadas ao vilarejo eram, na verdade, armas biológicas (B.O.W.s) disfarçadas de soldados. Isso sugere que a organização que jurou proteger o mundo agora está produzindo seus próprios monstros.',
-    source: 'Resident Evil Village Ending',
+      'A teoria sombria que nasceu no final de Village estava totalmente correta. Em "Requiem", confirmamos que a B.S.A.A. cruzou a linha moral financiando B.O.W.s feitas de Evolved-Mold e cepas Progenitor, trabalhando pelas sombras com "The Connections". O que restou da agência foi implodido e exposto globalmente.',
+    source: 'Relatório de Grace Ashcroft / Requiem',
   },
   {
-    id: 'rose-winters-future',
-    title: 'Rosemary Winters: A Próxima Eveline?',
+    id: 'raccoon-city-lie',
+    title: '[COMPROVADA] A Mentira de Raccoon City',
     description:
-      'A cena pós-créditos de Village mostra Rose sendo monitorada. Muitos acreditam que ela será a protagonista ou antagonista central de um futuro spin-off, possuindo controle total sobre o Megamiceto mundial.',
-    source: 'Village DLC / Post-Credits',
+      'Fãs debatiam que o governo dos EUA havia ocultado verdades piores que a negligência. O dossiê de Requiem provou que o bombardeio nuclear de 1998 foi orquestrado pela "The Connections" e políticos corruptos para varrer a verdade da ARK e tomar o poderoso projeto Elpis de Spencer, culpando a Umbrella inteiramente como distração.',
+    source: 'Terminal ARK / Requiem Lore',
   },
   {
-    id: 'hookman-mold-connection',
-    title: 'Hook Man e o Mofo',
+    id: 'elpis-purpose',
+    title: '[COMPROVADA] A Redenção Oculta de Spencer',
     description:
-      'A teoria de que os conceitos descartados de Resident Evil 3.5 (alucinações de Leon com o homem do gancho) foram a base direta para o terror psicológico causado pelas infecções de Mofo em RE7.',
-    source: 'Game Design History Analysis',
+      'Uma minoria teórica da comunidade sustentava que Spencer guardava um segredo final que não envolvia o genocídio virológico. Confirmado: O projeto definitivo "Elpis" nunca foi uma arma de evolução ou controle mental, mas sim uma Panaceia Antiviral Suprema elaborada pelo próprio criador arrependido, o qual a senhou como "Hope".',
+    source: 'Arquivos de Ozwell E. Spencer / Entrevistas de Alyssa',
   },
   {
-    id: 'requiem-mythology',
-    title: 'O Purgatório de Chris Redfield',
+    id: 'wesker-clone',
+    title: '[COMPROVADA] O Legado Vivo de Wesker',
     description:
-      'RE9 Requiem sugere o fim da linha para Chris. A teoria é que ele morrerá protegendo o legado dos S.T.A.R.S., passando o bastão para uma nova geração de heróis não infectados.',
-    source: 'Bioterrorism Insider Rumors',
+      'As teorias baseadas nos resquícios soltos de RE4 Remake sugeriam ressurreição. Requiem atendeu com uma releitura: a "The Connections" havia modificado e treinado seu agente supremo, Zeno, para ser fisicamente idêntico a Wesker. Contorcido por húbris, ele tentou potencializar seus golpes com Elpis (acreditando ser mutagênico) e anulou a si mesmo.',
+    source: 'Resident Evil Requiem Boss Files',
+  },
+  {
+    id: 'rose-winters-target',
+    title: '[EM OBSERVAÇÃO] O Foco em Rose Winters',
+    description:
+      'A cena pós-créditos de Village aliada ao novo alerta militar deixam claro que o ecossistema viral deseja as propriedades da jovem Winters. O Conselho Desconhecido planeja recuperar o DNA matriz megamiceto contido dentro da garota, o que coloca ex-operativos em guerra permanente contra as ordens de extração federais.',
+    source: 'Tape Pós-Créditos / Dossiê Final',
   },
 ];
 
