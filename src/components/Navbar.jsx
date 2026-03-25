@@ -18,6 +18,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const navItems = [
+  { name: 'Requiem', path: '/requiem', icon: Sparkles },
   { name: 'Cronologia', path: '/chronology', icon: Clock },
   { name: 'Jogos', path: '/games', icon: Book },
   { name: 'Virologia', path: '/viruses', icon: Biohazard },
@@ -54,9 +55,9 @@ export default function Navbar() {
               <Link
                 key={item.path}
                 to={item.path}
-                className="nav-link text-xs font-black uppercase tracking-widest flex items-center gap-2"
+                className={`nav-link text-xs font-black uppercase tracking-widest flex items-center gap-2 ${item.path === '/requiem' ? 'text-biohazard-red border border-biohazard-red/50 bg-biohazard-red/10 px-3 py-1.5 rounded-full hover:bg-biohazard-red hover:text-white transition-all shadow-[0_0_15px_rgba(220,38,38,0.3)]' : ''}`}
               >
-                <item.icon className="w-3.5 h-3.5 text-biohazard-red/50" />
+                <item.icon className={`w-3.5 h-3.5 ${item.path === '/requiem' ? 'text-current' : 'text-biohazard-red/50'}`} />
                 {item.name}
               </Link>
             ))}

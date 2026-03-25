@@ -2,6 +2,7 @@ import { AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import PageLayout from './components/PageLayout';
+import SpoilerWarning from './components/SpoilerWarning';
 
 // Pages
 import AnimationsPage from './pages/AnimationsPage';
@@ -27,8 +28,10 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <PageLayout>
-      <AnimatePresence mode="wait">
+    <>
+      <SpoilerWarning />
+      <PageLayout>
+        <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/games" element={<GamesList />} />
@@ -51,6 +54,7 @@ function App() {
         </Routes>
       </AnimatePresence>
     </PageLayout>
+    </>
   );
 }
 
