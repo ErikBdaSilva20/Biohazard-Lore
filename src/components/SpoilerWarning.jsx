@@ -25,7 +25,7 @@ export default function SpoilerWarning() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-4xl bg-black border-2 border-biohazard-red shadow-[0_0_80px_rgba(220,38,38,0.4)] overflow-hidden flex flex-col md:flex-row"
+            className="relative w-full max-w-4xl max-h-[90vh] bg-black border-2 border-biohazard-red shadow-[0_0_80px_rgba(220,38,38,0.4)] overflow-y-auto overflow-x-hidden flex flex-col md:flex-row"
           >
             {/* Background scanline effect */}
             <div
@@ -37,7 +37,7 @@ export default function SpoilerWarning() {
             />
 
             {/* Left Image Section */}
-            <div className="relative w-full md:w-2/5 h-48 md:h-auto border-b-2 md:border-b-0 md:border-r-2 border-biohazard-red/50">
+            <div className="shrink-0 relative w-full md:w-2/5 h-32 sm:h-48 md:h-auto border-b-2 md:border-b-0 md:border-r-2 border-biohazard-red/50">
               <div className="absolute inset-0 bg-biohazard-red/20 mix-blend-multiply z-10" />
               <img
                 src={umbrellaImg}
@@ -48,16 +48,16 @@ export default function SpoilerWarning() {
             </div>
 
             {/* Right Content Section */}
-            <div className="relative flex flex-col justify-between w-full md:w-3/5 p-6 md:p-10 z-10">
+            <div className="relative flex flex-col justify-between w-full md:w-3/5 p-5 sm:p-6 md:p-10 z-10 min-h-fit">
               <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <ShieldAlert className="w-8 h-8 text-biohazard-red animate-pulse" />
-                  <span className="text-biohazard-red text-xs md:text-sm font-black uppercase tracking-[0.4em]">
+                <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                  <ShieldAlert className="w-6 h-6 sm:w-8 sm:h-8 text-biohazard-red animate-pulse" />
+                  <span className="text-biohazard-red text-[10px] sm:text-xs md:text-sm font-black uppercase tracking-[0.4em]">
                     Alerta de Segurança
                   </span>
                 </div>
 
-                <h2 className="text-3xl md:text-5xl font-black italic text-white uppercase mb-4 tracking-tighter leading-none">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-black italic text-white uppercase mb-4 tracking-tighter leading-none">
                   AVISO DE <br />
                   <span className="text-biohazard-red">SPOILERS EXTREMOS</span>
                 </h2>
@@ -76,13 +76,13 @@ export default function SpoilerWarning() {
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={handleAccept}
-                  className="group relative flex-1 py-4 bg-biohazard-red hover:bg-red-700 text-white font-black uppercase text-xs md:text-sm tracking-widest transition-all duration-300 overflow-hidden flex items-center justify-center gap-2"
+                  className="group relative flex-1 py-3 sm:py-4 bg-biohazard-red hover:bg-red-700 text-white font-black uppercase text-xs md:text-sm tracking-widest transition-all duration-300 overflow-hidden flex items-center justify-center gap-2"
                 >
-                  <AlertOctagon className="w-4 h-4" />
-                  <span className="relative z-10">Estou Ciente e Assumo os Riscos</span>
+                  <AlertOctagon className="w-4 h-4 shrink-0" />
+                  <span className="relative z-10 text-center">Estou Ciente e Assumo os Riscos</span>
                   <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 mix-blend-overlay opacity-20" />
                 </button>
               </div>
