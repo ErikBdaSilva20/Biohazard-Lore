@@ -257,4 +257,23 @@ export const characters = [
     relatedGames: ['Resident Evil 0', 'Resident Evil 1'],
     relatedViruses: ['T-Vírus', 'Progenitor', 'A-Vírus'],
   },
+  {
+    id: 'grace-ashcroft',
+    name: 'Grace Ashcroft',
+    slug: 'grace-ashcroft',
+    alias: 'Analista de Inteligência',
+    firstAppearance: 'RE Requiem (2025/2026)',
+    status: 'Ativa (FBI)',
+    bio: 'Filha adotiva secreta de Ozwell E. Spencer que foi criada e protegida pela infame jornalista Alyssa Ashcroft. Grace redefiniu o verdadeiro significado do Survivor Horror investigando conspirações biológicas usando puramente sua furtividade, gestão de recursos mínimos e notável frieza sob imensa pressão.',
+    evolution: [
+      {
+        game: 'Resident Evil Requiem',
+        role: 'Protagonista Principal',
+        description:
+          'Infiltra-se nas ruínas e bases escondidas de "A Conexões" para descobrir a Panaceia Elpis, destrancando os maiores segredos encobridores sobre o passado negro de Raccoon City que datam desde 1998.',
+      },
+    ],
+    relatedGames: ['Resident Evil Requiem'],
+    relatedViruses: ['Nenhum (Evasão Total e Exposição ao Elpis)'],
+  },
 ];

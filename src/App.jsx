@@ -16,6 +16,7 @@ import InfectionMap from './pages/InfectionMap';
 import TheoriesPage from './pages/TheoriesPage';
 import Timeline from './pages/Timeline';
 import VirusesList from './pages/VirusesList';
+import RequiemPage from './pages/RequiemPage';
 
 function App() {
   const location = useLocation();
@@ -41,6 +42,7 @@ function App() {
           <Route path="/animations" element={<AnimationsPage />} />
           <Route path="/map" element={<InfectionMap />} />
           <Route path="/re4-comparison" element={<ComparisonPage />} />
+          <Route path="/requiem" element={<RequiemPage />} />
 
           {/* Legacy & Redirects support if needed */}
           <Route path="/game/:id" element={<GamePage />} />

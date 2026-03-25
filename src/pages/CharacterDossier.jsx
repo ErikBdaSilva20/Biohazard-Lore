@@ -13,6 +13,7 @@ import KrauserFace from '../assets/KrauserFace.jpg';
 import LeonFace from '../assets/LeonFace.jpg';
 import RebeccaFace from '../assets/RebeccaFace.jpg';
 import WeskerFace from '../assets/WeskerFace.jpg';
+import GraceAshcroftFace from '../assets/GraceAshcroft.jpg';
 
 import { characters } from '../data/characters';
 
@@ -25,6 +26,7 @@ const characterFaces = {
   'ada-wong': AdaFace,
   'jack-krauser': KrauserFace,
   'rebecca-chambers': RebeccaFace,
+  'grace-ashcroft': GraceAshcroftFace,
 };
 
 export default function CharacterDossier() {

@@ -249,28 +249,27 @@ export const games = [
   },
   {
     id: 're9',
-    title: 'Resident Evil 9: Requiem',
-    year: '2025/2026 (Estimado)',
-    slug: 'resident-evil-9',
-    summary: 'O clímax épico de décadas de bioterrorismo e o possível fim da era atual da lore.',
+    title: 'Resident Evil Requiem',
+    year: '2025',
+    slug: 'resident-evil-requiem',
+    summary: 'A queda definitiva da B.S.A.A. e o sacrifício final da velha guarda.',
     description:
-      'Informações vazadas e teorias indicam que RE9, codinome "Requiem", será o maior jogo da franquia até hoje. A trama deve girar em torno do fechamento dos arcos de Chris Redfield e possivelmente Jill Valentine, unindo todas as pontas soltas desde 1996. Rumores sugerem um ambiente de mundo aberto em uma ilha ou cidade devastada, explorando a corrupção interna da B.S.A.A.',
+      'Lançado recentemente como o encerramento do longo arco de bioterrorismo moderno, Requiem narra a infiltração brutal de Chris Redfield, Jill Valentine e a unidade Hound Wolf na sede europeia da B.S.A.A. que começou a fabricar supersoldados através da combinação de Progenitor Alpha e Evolved-Mold. O jogo marca uma verdadeira catarse, desvendando o papel obscuro da "The Connections" desde as sombras e entregando o visceral documento Pós-Créditos: "O Relatório de Grace".',
     context:
-      'Consequências diretas do final de Village e as operações clandestinas da B.S.A.A. com armas biológicas.',
+      'Resposta tática agressiva de desertores após as revelações ocorridas no vilarejo oriental de Mother Miranda.',
     mainEvent:
-      'Desconhecido. Espera-se o confronto final contra uma organização que herdou o legado de Spencer.',
+      'Destruição da inteligência central da B.S.A.A. na Europa, morte de traidores de alta patente e o vazamento global do Projeto "Rosemary".',
     characters: [
       'chris-redfield',
       'jill-valentine',
       'leon-kennedy',
       'claire-redfield',
-      'rosemary-winters',
     ],
-    pathogens: ['evolved-mold', 'new-progenitor-strain'],
+    pathogens: ['evolved-mold', 'progenitor-alpha-strain'],
     consequences:
-      'Provável conclusão definitiva para os personagens clássicos da década de 90 e o início de uma nova era para a franquia.',
-    connections: ['Resident Evil Village', 'Total Franchise Continuity'],
+      'O fim total da B.S.A.A. Global. A revelação de que The Connections quer usar Rosemary Winters como vaso final para os restos da Umbrella original.',
+    connections: ['Resident Evil Village', 'Resident Evil 7'],
     trivia:
-      'Rumores dizem que o jogo está em desenvolvimento há mais de 7 anos e será o encerramento do arco iniciado no RE7.',
+      'Resident Evil Requiem finalmente uniu novamente Chris e Jill nas linhas de frente desde o fatídico incidente de Revelations e África (RE5). Grace\'s Report consolidou "The Connections" como os verdadeiros antagonistas da nova era.',
   },
 ];

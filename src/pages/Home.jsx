@@ -104,9 +104,9 @@ export default function Home() {
                   ))}
                 </div>
                 <div className="mt-8 p-4 bg-biohazard-red/10 border border-biohazard-red/20 rounded">
-                  <p className="text-[10px] text-biohazard-red font-bold uppercase tracking-tighter leading-tight">
-                    Atenção: Múltiplos avisos de perigo biológico detectados em nível global.
-                    Arquivos RE9 identificados em codinome REQUIEM.
+                  <p className="text-[10px] text-biohazard-red font-bold uppercase tracking-tighter leading-tight animate-pulse">
+                    Atenção: Arquivos confidenciais "REQUIEM" atualizados. Relatório da agente Grace
+                    desbloqueado no sistema central.
                   </p>
                 </div>
               </div>
@@ -134,23 +134,23 @@ export default function Home() {
               </div>
             </div>
             <div className="flex-1 order-1 md:order-2">
-              <span className="px-3 py-1 bg-biohazard-red text-white text-[10px] font-black uppercase tracking-widest mb-6 inline-block">
-                Flash: RE9 Information
+              <span className="px-3 py-1 bg-red-600 text-white text-[10px] font-black uppercase tracking-widest mb-6 inline-block animate-pulse shadow-[0_0_15px_rgba(255,0,0,0.5)]">
+                Classified: Liberado
               </span>
               <h2 className="text-5xl font-black italic text-white uppercase mb-6 tracking-tighter leading-none">
-                O Futuro: <br />
-                <span className="text-biohazard-red">RE9 Requiem</span>
+                RESIDENT EVIL <br />
+                <span className="text-biohazard-red">REQUIEM</span>
               </h2>
               <p className="text-gray-400 mb-8 leading-relaxed font-light text-lg">
-                O capítulo final da saga que unificará décadas de horror. Novos vazamentos sugerem
-                um fechamento massivo para heróis lendários como Chris e Leon. Explore as teorias
-                mais recentes baseadas nos arquivos interceptados.
+                O jogo foi lançado e as teorias foram confirmadas. A B.S.A.A. corrompida foi
+                desmascarada e o relatório secreto da Grace finalmente vazado para o público, amarrando
+                as tramas The Connections e a velha guarda.
               </p>
               <Link
-                to="/theories"
-                className="flex items-center gap-4 text-white font-black uppercase text-xs tracking-[0.3em] hover:text-biohazard-red transition-colors"
+                to="/requiem"
+                className="inline-flex items-center justify-center bg-biohazard-red hover:bg-black hover:text-biohazard-red border-2 border-transparent hover:border-biohazard-red px-8 py-4 gap-4 text-white font-black uppercase text-xs tracking-widest transition-all duration-300 shadow-[0_0_20px_rgba(255,0,0,0.3)] hover:shadow-none"
               >
-                Investigar Teorias <span>→</span>
+                Acessar o Relatório Grace
               </Link>
             </div>
           </div>

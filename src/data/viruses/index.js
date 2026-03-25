@@ -156,4 +156,23 @@ export const viruses = [
     relatedGames: ['Resident Evil 7', 'Resident Evil Village', 'Resident Evil 9'],
     dangerLevel: 'Espiritual / Existencial',
   },
+  {
+    id: 'elpis',
+    name: 'Elpis (A Panaceia)',
+    slug: 'elpis',
+    type: 'Medicamento Antiviral Absoluto',
+    origin: 'Laboratório Subterrâneo ARK',
+    discoverer: 'Ozwell E. Spencer',
+    description:
+      'Diferente da crença popular dentro do submundo que a via como uma arma de controle mental, Elpis é um antiviral supremo criado por Spencer em um raro momento de arrependimento. Ela possui a incrível capacidade de purificar organismos biológicos contaminados por patógenos da Umbrella, cancelando mutações e curando degenerações de logo prazo (como a Síndrome de Raccoon City de Leon S. Kennedy).',
+    symptoms: [
+      'Neutralização total e imediata de mutações baseadas em T-Vírus',
+      'Reversão de condições orgânicas degenerativas (SRC)',
+      'Dissolução letal quando administrado incorretamente a indivíduos muito modificados (ex: Zeno)',
+      'Restauração do sistema imunológico e reconstrução limpa de RNA',
+    ],
+    notableIncidents: ['O Fim da B.S.A.A (Incidente Requiem)', 'Cura de Sobreviventes de 1998'],
+    relatedGames: ['Resident Evil Requiem'],
+    dangerLevel: 'Classificação Curativa Suprema',
+  },
 ];

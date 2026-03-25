@@ -103,11 +103,12 @@ export const timelineEvents = [
     importance: 'high',
   },
   {
-    date: 'Futuro',
-    title: 'Teoria: O Retorno de Wesker',
+    date: '2025',
+    title: 'O Fim da B.S.A.A. (Incidente Requiem)',
     description:
-      'Muitos arquivos no RE4 Remake sugerem que Albert Wesker pode ter planos de contingência para sua ressurreição, ou que a Umbrella mantém clones de reserva prontos para serem ativados.',
-    type: 'theory',
-    importance: 'medium',
+      'Resident Evil Requiem. O Hound Wolf Squad ataca o coração europeu da corporação anti-bioterrorismo (B.S.A.A.), confirmando a corrupção de seus fundadores. O "Relatório de Grace", desenterrado das cinzas, atesta a sobrevivência oculta da The Connections, manipulando décadas de guerra viral visando uma menina: Rosemary Winters.',
+    type: 'game',
+    gameId: 're9',
+    importance: 'critical',
   },
 ];
