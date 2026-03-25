@@ -1,22 +1,18 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldAlert, AlertOctagon } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { AlertOctagon, ShieldAlert } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import umbrellaImg from '../assets/Umbrella.jpg';
 
 export default function SpoilerWarning() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const hasSeenInfo = sessionStorage.getItem('re_spoiler_warning_seen');
-    if (!hasSeenInfo) {
-      // Small delay to make the popup more impactful
-      const timer = setTimeout(() => setIsOpen(true), 800);
-      return () => clearTimeout(timer);
-    }
+    // Small delay to make the popup more impactful
+    const timer = setTimeout(() => setIsOpen(true), 900);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleAccept = () => {
-    sessionStorage.setItem('re_spoiler_warning_seen', 'true');
     setIsOpen(false);
   };
 
@@ -35,8 +31,7 @@ export default function SpoilerWarning() {
             <div
               className="absolute inset-0 opacity-20 pointer-events-none z-0"
               style={{
-                backgroundImage:
-                  'linear-gradient(rgba(220, 38, 38, 0.2) 1px, transparent 1px)',
+                backgroundImage: 'linear-gradient(rgba(220, 38, 38, 0.2) 1px, transparent 1px)',
                 backgroundSize: '100% 4px',
               }}
             />
@@ -69,10 +64,14 @@ export default function SpoilerWarning() {
 
                 <div className="space-y-4 mb-8 border-l-4 border-biohazard-red/50 pl-4">
                   <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light">
-                    Acesso a arquivos restritos detectado. Nossa base de dados contém informações confidenciais altamente sensíveis, incluindo detalhes cruciais sobre o recém-lançado <strong className="text-white">Resident Evil Requiem</strong>.
+                    Acesso a arquivos restritos detectado. Nossa base de dados contém informações
+                    confidenciais altamente sensíveis, incluindo detalhes cruciais sobre o
+                    recém-lançado <strong className="text-white">Resident Evil Requiem</strong>.
                   </p>
                   <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
-                    Se você não deseja comprometer sua experiência e evitar spoilers da nova narrativa, teorias confirmadas e o desfecho do Projeto Elpis, recomendamos que <strong>não consulte profundamente</strong> nossa aplicação ainda.
+                    Se você não deseja comprometer sua experiência e evitar spoilers da nova
+                    narrativa, teorias confirmadas e o desfecho do Projeto Elpis, recomendamos que{' '}
+                    <strong>não consulte profundamente</strong> nossa aplicação ainda.
                   </p>
                 </div>
               </div>
@@ -87,7 +86,7 @@ export default function SpoilerWarning() {
                   <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 mix-blend-overlay opacity-20" />
                 </button>
               </div>
-              
+
               {/* Small details */}
               <div className="absolute top-4 right-4 text-[10px] text-biohazard-red/50 font-mono tracking-widest uppercase">
                 ID: UMB-RQ-9942
