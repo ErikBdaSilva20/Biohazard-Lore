@@ -87,6 +87,7 @@ export default function TheoriesPage() {
       </div>
 
       {/* RE9 Theory Spotlight */}
+      {/* 
       <div className="mt-24 p-16 glass-card bg-purple-900/5 border-purple-500/30 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-500/5 via-transparent to-transparent" />
         <h3 className="text-3xl font-black text-white uppercase mb-6 italic tracking-tighter relative z-10">
@@ -100,6 +101,7 @@ export default function TheoriesPage() {
           <Sparkles className="w-4 h-4 group-hover:animate-spin" />
         </button>
       </div>
+      */}
     </div>
   );
 }
