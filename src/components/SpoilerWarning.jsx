@@ -2,9 +2,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { AlertOctagon, ShieldAlert } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import umbrellaImg from '../assets/Umbrella.jpg';
+import { useAudio } from '../contexts/AudioContext';
 
 export default function SpoilerWarning() {
   const [isOpen, setIsOpen] = useState(false);
+  const { playMusic } = useAudio();
 
   useEffect(() => {
     // Small delay to make the popup more impactful
@@ -13,6 +15,7 @@ export default function SpoilerWarning() {
   }, []);
 
   const handleAccept = () => {
+    playMusic();
     setIsOpen(false);
   };
 

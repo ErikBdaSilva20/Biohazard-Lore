@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import PageLayout from './components/PageLayout';
 import SpoilerWarning from './components/SpoilerWarning';
+import { AudioProvider } from './contexts/AudioContext';
 
 // Pages
 import AnimationsPage from './pages/AnimationsPage';
@@ -28,7 +29,7 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <>
+    <AudioProvider>
       <SpoilerWarning />
       <PageLayout>
         <AnimatePresence mode="wait">
@@ -54,7 +55,7 @@ function App() {
         </Routes>
       </AnimatePresence>
     </PageLayout>
-    </>
+    </AudioProvider>
   );
 }
 

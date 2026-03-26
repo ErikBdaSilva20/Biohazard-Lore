@@ -12,10 +12,13 @@ import {
   Target,
   Tv,
   Users,
+  Volume2,
+  VolumeX,
   X,
 } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useAudio } from '../contexts/AudioContext';
 
 const navItems = [
   { name: 'Requiem', path: '/requiem', icon: Sparkles },
@@ -36,6 +39,7 @@ const moreItems = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const { isPlaying, toggleMusic } = useAudio();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[1000] bg-biohazard-dark/80 backdrop-blur-lg border-b border-biohazard-red/20 h-20">
@@ -112,6 +116,19 @@ export default function Navbar() {
                 )}
               </AnimatePresence>
             </div>
+
+            {/* Music Toggle Desktop */}
+            <button
+              onClick={toggleMusic}
+              className="flex items-center justify-center p-2 rounded-lg border border-biohazard-red/30 bg-biohazard-red/5 hover:bg-biohazard-red/20 transition-all group lg:ml-4"
+              title={isPlaying ? "Pausar trilha sonora" : "Tocar trilha sonora"}
+            >
+              {isPlaying ? (
+                <Volume2 className="w-4 h-4 text-biohazard-red group-hover:scale-110 transition-transform" />
+              ) : (
+                <VolumeX className="w-4 h-4 text-gray-500 group-hover:scale-110 transition-transform" />
+              )}
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -147,6 +164,25 @@ export default function Navbar() {
                 aria-label="Fechar Menu"
               >
                 <X className="w-8 h-8" />
+              </button>
+            </div>
+
+            {/* Mobile Music Toggle */}
+            <div className="px-6 py-4 border-b border-biohazard-red/10 bg-black/20">
+              <button 
+                onClick={toggleMusic}
+                className="flex items-center gap-3 w-full"
+              >
+                <div className={`p-2 rounded-lg border ${isPlaying ? 'border-biohazard-red bg-biohazard-red/20' : 'border-white/10 bg-white/5'}`}>
+                  {isPlaying ? (
+                    <Volume2 className="w-5 h-5 text-biohazard-red" />
+                  ) : (
+                    <VolumeX className="w-5 h-5 text-gray-500" />
+                  )}
+                </div>
+                <span className={`text-[11px] font-black uppercase tracking-widest ${isPlaying ? 'text-white' : 'text-gray-500'}`}>
+                  {isPlaying ? 'Trilha Sonora: Ativa' : 'Trilha Sonora: Pausada'}
+                </span>
               </button>
             </div>
 
